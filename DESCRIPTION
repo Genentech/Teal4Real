@@ -1,0 +1,16 @@
+Package: Teal4Real
+Title: Reporting tool for Real-world (and other) Data based on teal
+Version: 0.0.6
+Authors@R: c( 
+    person(given = "Michael", family = "Bretscher", role = c("aut", "cre"), email = "michael.bretscher@roche.com"),
+    person(family = "Sabanes Bove", given = "Daniel ", email = "daniel.sabanes_bove@roche.com", role = "aut"))
+Description: Teal4Real brings the power of Teal to Real-world Data by transforming one-row-per-patient datasets to ADaM format that Teal understands.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    rstudioapi
+VignetteBuilder: knitr
