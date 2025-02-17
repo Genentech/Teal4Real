@@ -197,6 +197,7 @@ app <- init(
         module(
             label = "Cohort attrition",
             ui = function(id) {
+                ns <- NS(id)
                 if (is.null(attributes(adsl)$attrition_table)) {
                     attributes(adsl)$attrition_table <- tibble(
                         Notice = paste0(
@@ -210,6 +211,27 @@ app <- init(
 
                 if (is.data.frame(attrition_table)) {
                     renderFunc <- renderTable
+                    outputType <- tableOutput
+                    content <- attrition_table
+                } else if (is.character(attrition_table)) {
+                    renderFunc <- renderUI
+                    outputType <- uiOutput
+                    content <- HTML(attrition_table)
+                } else {
+                    stop("Unsupported attribute type")
+                }
+
+                tagList(
+                    tags$b("Inclusion- & Exclusion criteria:\n\n\n\n"),
+                    outputType(ns("attrition_content"))
+                )
+            },
+            server = function(input, output, session) {
+                ns <- session$ns
+                attrition_table <- attributes(adsl)$attrition_table
+
+                if (is.data.frame(attrition_table)) {
+                    renderFunc <- renderTable
                     content <- attrition_table
                 } else if (is.character(attrition_table)) {
                     renderFunc <- renderUI
@@ -218,10 +240,7 @@ app <- init(
                     stop("Unsupported attribute type")
                 }
 
-                tagList(
-                    tags$b("Inclusion- & Exclusion criteria:\n\n\n\n"),
-                    renderFunc(content)
-                )
+                output$attrition_content <- renderFunc(content)
             }
         ),
 

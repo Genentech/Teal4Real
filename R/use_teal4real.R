@@ -26,8 +26,7 @@ use_teal4real<- function(overwrite = FALSE){
                 caption = "Please choose a folder where to place the Teal4Real shiny app files."
             )
         }, error = function(e) {
-        #FIXME this doesn't work, files are written to the current directory
-        target_folder <- readline(prompt="Please enter the directory path: ")
+        target_folder <<- readline(prompt="Please enter the directory path: ")
         })
     } else {
         stop("Teal4Real::use_teal4real must be called in interactive mode.")
