@@ -397,5 +397,8 @@ app <- init(
     )
 )
 
+if(interactive()){
+    app <-  shinyApp(ui = app$ui, server = app$server)
+    shiny::runApp(app)
+}
 
-shinyApp(ui = app$ui, server = app$server)

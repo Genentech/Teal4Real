@@ -34,8 +34,8 @@ get_survival_lung_cancer_data <- function() {
     select(-probA, -ref_prob)
 
   atts <- paste0(
-    "<p>This is the place to display a cohort attrition table, detailing how the analysis dataset was obtained from a larger database.</p>",
     "<p>&nbsp;</p>",
+    "<p>This is the place to display a cohort attrition table, detailing how the analysis dataset was obtained from a larger database.</p>",
     "<p>Instead of I/E criteria we display variable info for this demo dataset, which is based on the lung dataset of the survival R package.</p>",
     "<p>&nbsp;</p>",
     "<p><strong>NCCTG_Lung_Cancer_Data</strong> from the 'survival' R package.</p>",
