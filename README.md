@@ -4,7 +4,7 @@ A reporting tool for Real-world Data based on Shiny &amp; teal.modules.clinical.
 
 </br>
 
-![](man/figures/Teal4Real_demo.gif){#id .class width=70% height=50% padding=30px}
+![](man/figures/Teal4real_demo.gif){#id .class width=70% height=50% padding=30px}
 
 </br>
 
