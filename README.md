@@ -1,6 +1,14 @@
 # [Teal4Real](https://genentech.github.io/Teal4Real/)
 
-A reporting tool for Real-world Data based on Shiny &amp; teal.modules.clinical. See here for a [demo app](# "URL will be added soon").
+A reporting tool for Real-world Data based on Shiny &amp; teal.modules.clinical. 
+
+</br>
+
+![](man/figures/Teal4Real_demo.gif){#id .class width=70% height=50% padding=30px}
+
+</br>
+
+See here for a [demo app](https://bretscher-biometrics.shinyapps.io/teal4real-demo/).
 
 </br>
 
@@ -72,8 +80,5 @@ Take into consideration that in order to publish a Teal4Reall app to an rsconnec
 **A note on caching**: when the function that returns the analysis dataset is first called, the data is generated and can be cached for future calls if `update_cache = FALSE` (in the config file `Teal4Real_userconfig.R`). The default option is not to cache.
 Caching leads to strong performance gains for the Shiny app when data-generation is time intense. 
 
-## Video Tutorial 
-
-Coming soon...
 
 

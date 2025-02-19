@@ -8,8 +8,8 @@
 <title>Reporting tool for Real-world (and other) Data based on teal • Teal4Real</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Reporting tool for Real-world (and other) Data based on teal">
 <meta name="description" content="Teal4Real brings the power of Teal to Real-world Data by transforming one-row-per-patient datasets to ADaM format that Teal understands.">
 <meta property="og:description" content="Teal4Real brings the power of Teal to Real-world Data by transforming one-row-per-patient datasets to ADaM format that Teal understands.">
@@ -54,7 +54,11 @@
 <div class="page-header"><h1 id="teal4real">
 <a href="https://genentech.github.io/Teal4Real/" class="external-link">Teal4Real</a><a class="anchor" aria-label="anchor" href="#teal4real"></a>
 </h1></div>
-<p>A reporting tool for Real-world Data based on Shiny &amp; teal.modules.clinical. See here for a <a href="#" title="URL will be added soon">demo app</a>.</p>
+<p>A reporting tool for Real-world Data based on Shiny &amp; teal.modules.clinical.</p>
+<p></p>
+<p><img src="reference/figures/Teal4Real_demo.gif" id="id" class="class" style="width:70.0%;height:50.0%" padding="30px"></p>
+<p></p>
+<p>See here for a <a href="https://bretscher-biometrics.shinyapps.io/teal4real-demo/" class="external-link">demo app</a>.</p>
 <p></p>
 <p>Teal4Real brings the power of <a href="https://insightsengineering.github.io/teal/latest-tag/" class="external-link">Teal</a> to Real-world Data by transforming one-row-per-patient datasets to ADaM format that Teal understands.</p>
 <p>In order to set up a Teal4Real reporting app for your bespoke dataset you need to provide:</p>
@@ -85,7 +89,9 @@
 <h3 id="running-your-first-teal4real-app">Running your first Teal4Real app<a class="anchor" aria-label="anchor" href="#running-your-first-teal4real-app"></a>
 </h3>
 <p>Once all packages have been installed with compatible versions, an example Teal4Real app should run out-of-the-box after opening <code>Teal4Real_app.R</code> and pressing <code>Run App</code> in Rstudio.</p>
-<blockquote><p>Follow this <a href="articles/Basic_usage_examples.html">tutorial</a></p></blockquote>
+<blockquote>
+<p>Follow this <a href="articles/Basic_usage_examples.html">tutorial</a></p>
+</blockquote>
 </div>
 <div class="section level3">
 <h3 id="installing--compiling-dependencies">Installing &amp; compiling dependencies<a class="anchor" aria-label="anchor" href="#installing--compiling-dependencies"></a>
@@ -97,7 +103,9 @@
 </h3>
 <p>To customise your Teal4Real app, be sure to read &amp; modify all <code>Teal4Real</code> files that contain <code>user</code> in the file name: <code>Teal4Real_userdata.R</code> and <code>Teal4Real_userconfig.R</code>.</p>
 <p>Take into consideration that in order to publish a Teal4Reall app to an rsconnect server, any sourced R code required to generate the analysis dataset should be either in the same folder as the Teal4Real files, linked into said folder using dynamic links, or accessible via calling a function exported by an imported R package.</p>
-<blockquote><p>The easiest way is to just have all relevant R files in the same folder.</p></blockquote>
+<blockquote>
+<p>The easiest way is to just have all relevant R files in the same folder.</p>
+</blockquote>
 </div>
 </div>
 <div class="section level2">
@@ -105,16 +113,13 @@
 </h2>
 <p><strong>A note on caching</strong>: when the function that returns the analysis dataset is first called, the data is generated and can be cached for future calls if <code>update_cache = FALSE</code> (in the config file <code>Teal4Real_userconfig.R</code>). The default option is not to cache. Caching leads to strong performance gains for the Shiny app when data-generation is time intense.</p>
 </div>
-<div class="section level2">
-<h2 id="video-tutorial">Video Tutorial<a class="anchor" aria-label="anchor" href="#video-tutorial"></a>
-</h2>
-<p>Coming soon…</p>
-</div>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li>Apache License 2.0</li>
+<li>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+</li>
 </ul>
 </div>
 
@@ -130,7 +135,7 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Michael Bretscher <br><small class="roles"> Author, maintainer </small>  </li>
-<li>Daniel  Sabanes Bove <br><small class="roles"> Author </small>  </li>
+<li>Daniel Sabanes Bove <br><small class="roles"> Author </small>  </li>
 </ul>
 </div>
 

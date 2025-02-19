@@ -8,8 +8,8 @@
 <title>Basic usage examples • Teal4Real</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Basic usage examples">
 </head>
 <body>
@@ -50,7 +50,8 @@
 
 
 
-<script src="Basic_usage_examples_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+<div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Basic usage examples</h1>
@@ -65,34 +66,48 @@
 <div class="section level2">
 <h2 id="getting-the-first-demo-app-to-run">Getting the first demo app to run<a class="anchor" aria-label="anchor" href="#getting-the-first-demo-app-to-run"></a>
 </h2>
-<p>To get started, install the <code>Teal4Real</code> package and dependencies as described <a href="../index.html">here</a>. This vignette assumes you are using RStudio. However, this is not a requirement for using Teal4Real.</p>
-<p>Let’s load the package and use the only function in the package called <code><a href="../reference/use_teal4real.html">use_teal4real()</a></code>.</p>
-<p>A dialog will pop up and you will be asked to choose a folder where the app files should be copied to.</p>
+<p>To get started, install the <code>Teal4Real</code> package and
+dependencies as described <a href="../index.html">here</a>. This
+vignette assumes you are using RStudio. However, this is not a
+requirement for using Teal4Real.</p>
+<p>Let’s load the package and use the only function in the package
+called <code><a href="../reference/use_teal4real.html">use_teal4real()</a></code>.</p>
+<p>A dialog will pop up and you will be asked to choose a folder where
+the app files should be copied to.</p>
 <pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">Teal4Real</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/use_teal4real.html">use_teal4real</a></span><span class="op">(</span><span class="op">)</span></span></code></pre>
 <p>Let’s create an empty folder and copy the shiny app files there.</p>
 <p> </p>
-<p><img src="../reference/figures/basic_usage_01.png" id="id" class="class" padding="30px" style="width:70.0%;height:50.0%"></p>
+<p><img src="../reference/figures/basic_usage_01.png" id="id" class="class" style="width:70.0%;height:50.0%" padding="30px"></p>
 <p> </p>
 <p>You should now see the following files in your app folder:</p>
 <p> </p>
-<p><img src="../reference/figures/basic_usage_02.png" id="id" class="class" padding="50px" style="width:95.0%;height:95.0%"></p>
+<p><img src="../reference/figures/basic_usage_02.png" id="id" class="class" style="width:95.0%;height:95.0%" padding="50px"></p>
 <p> </p>
-<p>Open <code>Teal4Real_app.R</code> in the RStudio editor, and click <code>Run app</code> (top right)</p>
+<p>Open <code>Teal4Real_app.R</code> in the RStudio editor, and click
+<code>Run app</code> (top right)</p>
 <p> </p>
-<p><img src="../reference/figures/basic_usage_03.png" id="id" class="class" padding="50px" style="width:95.0%;height:95.0%"></p>
+<p><img src="../reference/figures/basic_usage_03.png" id="id" class="class" style="width:95.0%;height:95.0%" padding="50px"></p>
 <p> </p>
 <blockquote>
-<p>The result should be a demo app like <a href="#" title="URL will be added soon">this one</a></p>
+<p>The result should be a demo app like <a href="https://bretscher-biometrics.shinyapps.io/teal4real-demo/" class="external-link">this
+one</a></p>
 </blockquote>
 </div>
 <div class="section level2">
 <h2 id="step-two-adapting-the-app-to-run-on-a-different-dataset">Step two: adapting the app to run on a different dataset<a class="anchor" aria-label="anchor" href="#step-two-adapting-the-app-to-run-on-a-different-dataset"></a>
 </h2>
-<p>The example above used a dataset adapted from the <code>survival</code> R package.</p>
-<p>If you want to use Teal4Real on your own analysis dataset, you’ll have to look through all the files with “user” in the filename (<code>Teal4Real_userconfig.R</code> and <code>Teal4Real_userdata.R</code>), and read the explanations in the comments.</p>
-<p>In order to use Teal4Real with your own dataset, you’d have to provide a function that returns your dataset, plus a number of configurations that tell the app e.g. which variables are time-to-event endpoints, etc.</p>
+<p>The example above used a dataset adapted from the
+<code>survival</code> R package.</p>
+<p>If you want to use Teal4Real on your own analysis dataset, you’ll
+have to look through all the files with “user” in the filename
+(<code>Teal4Real_userconfig.R</code> and
+<code>Teal4Real_userdata.R</code>), and read the explanations in the
+comments.</p>
+<p>You’ll have to provide a function that returns your dataset, plus a
+number of configurations that tell the app e.g. which variables are
+time-to-event endpoints, etc.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

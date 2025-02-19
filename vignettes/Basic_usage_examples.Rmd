@@ -69,7 +69,7 @@ Open `Teal4Real_app.R` in the RStudio editor, and click `Run app` (top right)
 </br>
 
 
->The result should be a demo app like [this one](# "URL will be added soon")
+>The result should be a demo app like [this one](https://bretscher-biometrics.shinyapps.io/teal4real-demo/)
 
 
 
@@ -80,8 +80,7 @@ The example above used a dataset adapted from the `survival` R package.
 If you want to use Teal4Real on your own analysis dataset, you'll have to look through all the files with "user" 
 in the filename (`Teal4Real_userconfig.R` and `Teal4Real_userdata.R`), and read the explanations in the comments.
 
-In order to use Teal4Real with your own dataset, you'd have to provide a function that 
-returns your dataset, plus a number of configurations that tell the app e.g. which variables are time-to-event 
+You'll have to provide a function that returns your dataset, plus a number of configurations that tell the app e.g. which variables are time-to-event 
 endpoints, etc.
 
 
