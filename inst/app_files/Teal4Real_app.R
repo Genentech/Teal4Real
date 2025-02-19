@@ -37,6 +37,11 @@
 # Only run the following code locally (NOT on an rsconnect server)
 if (Sys.getenv("SHINY_PORT") == "") {
 
+  #get BiocManager if not present
+  if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+
   # Define order of repositories
   r <- c(
 

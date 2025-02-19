@@ -40,7 +40,7 @@ vignettes/*.pdf
 .Rproj.user
 
 #scratchpad
-/scratchpad
+scratchpad
 
 #rsconnect
 /app_files/rsconnect/
@@ -48,3 +48,10 @@ inst/doc
 
 # data cache
 app_cache
+
+#vscode
+.vscode
+
+Teal4Real-demo
+
+.DS_Store
