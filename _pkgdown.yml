@@ -1,2 +1,11 @@
 template:
   bootstrap: 5
+
+navbar:
+  structure:
+    left: [home, reference, articles]
+    right: [repo]
+  components:
+    repo:
+      text: "GitHub"
+      href: "https://github.com/Genentech/Teal4Real"
